@@ -1036,7 +1036,7 @@ void init_descriptor_and_pipeline_layouts(struct sample_info &info, bool use_tex
         layout_bindings[i].binding = i;
         layout_bindings[i].descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
         layout_bindings[i].descriptorCount = 1;
-        layout_bindings[i].stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT;
+        layout_bindings[i].stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT | VK_SHADER_STAGE_VERTEX_BIT;
         layout_bindings[i].pImmutableSamplers = NULL;
     }
 
