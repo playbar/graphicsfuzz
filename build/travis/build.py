@@ -52,7 +52,7 @@ def go():
 
     # Rebuild with tests.
     subprocess.check_call(["mvn", "clean"])
-    subprocess.check_call(["mvn", "package"])  # TODO: Enable image tests.
+    subprocess.check_call(["mvn", "package", "-PimageTests"])
 
     # Copy output.
     shutil.copy2(
